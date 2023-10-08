@@ -1,0 +1,24 @@
+{
+	"manifest_version": 3,
+	"name": "Game Eval",
+	"version": "1.0",
+	"permissions": [
+		"webRequest",
+		"storage",
+		"declarativeContent",
+		"activeTab",
+		"scripting",
+		"debugger"
+	],
+	"description": "GAME EVALUATION EXTENSION ",
+	"content_scripts": [
+		{ "matches": ["<all_urls>"], "css": ["my.css"], "js": ["content.js"] }
+	],
+	"action": {
+		"default_title": "test",
+		"default_popup": "popup.html"
+	},
+	"background": {
+		"service_worker": "background.js"
+	}
+}
